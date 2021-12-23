@@ -11,6 +11,6 @@
 //Console.WriteLine($"Day 03 Part 01 Solution - {dayThreePuzzle.SolvePartOne()}");
 //Console.WriteLine($"Day 03 Part 02 Solution - {dayThreePuzzle.SolvePartTwo()}");
 string daySixInput = File.ReadAllText("./Day06Input.txt");
-var daySixPuzzle = new Day06(daySixInput);
-Console.WriteLine($"Day 06 Part 01 Solution - {daySixPuzzle.SolvePartOne()}");
-Console.WriteLine($"Day 06 Part 02 Solution - {daySixPuzzle.SolvePartTwo()}");
+var daySixPuzzle = new Day06();
+Console.WriteLine($"Day 06 Part 01 Solution - {daySixPuzzle.SolvePartOne(daySixInput)}");
+Console.WriteLine($"Day 06 Part 02 Solution - {daySixPuzzle.SolvePartTwo(daySixInput)}");

@@ -1,16 +1,11 @@
 ﻿internal class Day06
 {
-  private readonly List<Fish> population;
-
-  public Day06(string daySixInput)
+  public int SolvePartOne(string daySixInput)
   {
-    population = new List<Fish>();
+    var population = new List<Fish>();
     foreach (var fishTimer in daySixInput.Split(','))
       population.Add(new Fish(int.Parse(fishTimer)));
-  }
 
-  public int SolvePartOne()
-  {
     int daysToModel = 80;
     List<Fish> newFish;
     for (int i = 0; i < daysToModel; i++)
@@ -28,9 +23,24 @@
     return population.Count;
   }
 
-  public int SolvePartTwo()
+  public long SolvePartTwo(string daySixInput)
   {
-    return 0;
+    int daysToModel = 256;
+    long[] population = new long[9];
+    foreach (var fishTimer in daySixInput.Split(','))
+      population[long.Parse(fishTimer)]++;
+
+    for (int day = 0; day < daysToModel; day++)
+    {
+      long newFishAndFishGivingBirth = population[0];
+      for (int fishGroup = 1; fishGroup <= 8; fishGroup++)
+      {
+        population[fishGroup - 1] = population[fishGroup];
+      }
+      population[6] += newFishAndFishGivingBirth;
+      population[8] = newFishAndFishGivingBirth;
+    }
+    return population.Sum();
   }
 
   private class Fish
