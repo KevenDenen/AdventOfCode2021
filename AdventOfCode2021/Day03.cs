@@ -1,6 +1,6 @@
 ﻿internal class Day03
 {
-  private string[] reportLines;
+  private readonly string[] reportLines;
 
   public Day03(string[] dayThreeInput)
   {
@@ -14,9 +14,7 @@
     int lineLength = reportLines[0].Length;
     for (int i = 0; i < lineLength; i++)
     {
-      int ones = reportLines.Count(s => s[i] == '1');
-      int zeros = reportLines.Count(s => s[i] == '0');
-      if (ones > zeros)
+      if (MostCommon(reportLines, i) == '1')
       {
         gamma += "1";
         epsilon += "0";
@@ -36,9 +34,7 @@
     int lineLength = reportLines[0].Length;
     for (int i = 0; i < lineLength; i++)
     {
-      int ones = o2Rating.Count(s => (s[i] == '1'));
-      int zeros = o2Rating.Count(s => (s[i] == '0'));
-      if (zeros > ones)
+      if (MostCommon(o2Rating, i) == '0')
       {
         o2Rating = o2Rating.Where(o => o[i] == '0').ToList();
       }
@@ -46,15 +42,13 @@
       {
         o2Rating = o2Rating.Where(o => o[i] == '1').ToList();
       }
-      if (o2Rating.Count() == 1) break;
+      if (o2Rating.Count == 1) break;
     }
     int o2Rate = Convert.ToInt32(o2Rating.First(), 2);
     List<string> co2Rating = reportLines.ToList();
     for (int i = 0; i < lineLength; i++)
     {
-      int ones = co2Rating.Count(s => (s[i] == '1'));
-      int zeros = co2Rating.Count(s => (s[i] == '0'));
-      if (zeros > ones)
+      if (MostCommon(co2Rating, i) == '0')
       {
         co2Rating = co2Rating.Where(o => o[i] == '1').ToList();
       }
@@ -62,9 +56,28 @@
       {
         co2Rating = co2Rating.Where(o => o[i] == '0').ToList();
       }
-      if (co2Rating.Count() == 1) break;
+      if (co2Rating.Count == 1) break;
     }
     int co2Rate = Convert.ToInt32(co2Rating.First(), 2);
     return o2Rate * co2Rate;
+  }
+
+  private static char MostCommon(IEnumerable<string> list, int position)
+  {
+    int ones = 0;
+    int zeros = 0;
+    foreach (string item in list)
+    {
+      if (item[position] == '1') 
+        ones++;
+      else
+        zeros++;
+    }
+    if (ones > zeros)
+      return '1';
+    else if (zeros > ones)
+      return '0';
+    else
+      return '2';
   }
 }
