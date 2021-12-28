@@ -18,8 +18,12 @@
 //var daySevenPuzzle = new Day07(daySevenInput);
 //Console.WriteLine($"Day 07 Part 01 Solution - {daySevenPuzzle.SolvePartOne()}");
 //Console.WriteLine($"Day 07 Part 02 Solution - {daySevenPuzzle.SolvePartTwo()}");
-string dayEightTestInput = "acedgfb cdfbe gcdfa fbcad dab cefabd cdfgeb eafb cagedb ab |cdfeb fcadb cdfeb cdbaf";
-string dayEightInput = File.ReadAllText("./Day08Input.txt");
-var dayEightPuzzle = new Day08(dayEightInput);
-Console.WriteLine($"Day 08 Part 01 Solution - {dayEightPuzzle.SolvePartOne()}");
-Console.WriteLine($"Day 08 Part 02 Solution - {dayEightPuzzle.SolvePartTwo()}");
+//string dayEightTestInput = "acedgfb cdfbe gcdfa fbcad dab cefabd cdfgeb eafb cagedb ab |cdfeb fcadb cdfeb cdbaf";
+//string dayEightInput = File.ReadAllText("./Day08Input.txt");
+//var dayEightPuzzle = new Day08(dayEightInput);
+//Console.WriteLine($"Day 08 Part 01 Solution - {dayEightPuzzle.SolvePartOne()}");
+//Console.WriteLine($"Day 08 Part 02 Solution - {dayEightPuzzle.SolvePartTwo()}");
+string dayNineInput = File.ReadAllText("./Day09Input.txt");
+var dayNinePuzzle = new Day09(dayNineInput);
+Console.WriteLine($"Day 09 Part 01 Solution - {dayNinePuzzle.SolvePartOne()}");
+Console.WriteLine($"Day 09 Part 02 Solution - {dayNinePuzzle.SolvePartTwo()}");
