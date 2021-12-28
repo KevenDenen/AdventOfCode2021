@@ -14,7 +14,12 @@
 //var daySixPuzzle = new Day06();
 //Console.WriteLine($"Day 06 Part 01 Solution - {daySixPuzzle.SolvePartOne(daySixInput)}");
 //Console.WriteLine($"Day 06 Part 02 Solution - {daySixPuzzle.SolvePartTwo(daySixInput)}");
-string daySevenInput = File.ReadAllText("./Day07Input.txt");
-var daySevenPuzzle = new Day07(daySevenInput);
-Console.WriteLine($"Day 07 Part 01 Solution - {daySevenPuzzle.SolvePartOne()}");
-Console.WriteLine($"Day 07 Part 02 Solution - {daySevenPuzzle.SolvePartTwo()}");
+//string daySevenInput = File.ReadAllText("./Day07Input.txt");
+//var daySevenPuzzle = new Day07(daySevenInput);
+//Console.WriteLine($"Day 07 Part 01 Solution - {daySevenPuzzle.SolvePartOne()}");
+//Console.WriteLine($"Day 07 Part 02 Solution - {daySevenPuzzle.SolvePartTwo()}");
+string dayEightTestInput = "acedgfb cdfbe gcdfa fbcad dab cefabd cdfgeb eafb cagedb ab |cdfeb fcadb cdfeb cdbaf";
+string dayEightInput = File.ReadAllText("./Day08Input.txt");
+var dayEightPuzzle = new Day08(dayEightInput);
+Console.WriteLine($"Day 08 Part 01 Solution - {dayEightPuzzle.SolvePartOne()}");
+Console.WriteLine($"Day 08 Part 02 Solution - {dayEightPuzzle.SolvePartTwo()}");
