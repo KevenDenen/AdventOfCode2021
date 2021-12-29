@@ -27,8 +27,34 @@
 //var dayNinePuzzle = new Day09(dayNineInput);
 //Console.WriteLine($"Day 09 Part 01 Solution - {dayNinePuzzle.SolvePartOne()}");
 //Console.WriteLine($"Day 09 Part 02 Solution - {dayNinePuzzle.SolvePartTwo()}");
-var dayElevenInput = File.ReadAllLines("./Day11Input.txt");
-var dayElevenPuzzle = new Day11(dayElevenInput);
-Console.WriteLine($"Day 11 Part 01 Solution - {dayElevenPuzzle.SolvePartOne()}");
-dayElevenPuzzle = new Day11(dayElevenInput);
-Console.WriteLine($"Day 11 Part 02 Solution - {dayElevenPuzzle.SolvePartTwo()}");
+//var dayElevenInput = File.ReadAllLines("./Day11Input.txt");
+//var dayElevenPuzzle = new Day11(dayElevenInput);
+//Console.WriteLine($"Day 11 Part 01 Solution - {dayElevenPuzzle.SolvePartOne()}");
+//dayElevenPuzzle = new Day11(dayElevenInput);
+//Console.WriteLine($"Day 11 Part 02 Solution - {dayElevenPuzzle.SolvePartTwo()}");
+var dayThirteenTestInput = @"6,10
+0,14
+9,10
+0,3
+10,4
+4,11
+6,0
+6,12
+4,1
+0,13
+10,12
+3,4
+3,0
+8,4
+1,10
+2,14
+8,10
+9,0
+
+fold along y=7
+fold along x=5".Split(Environment.NewLine);
+var dayThirteenTestPuzzle = new Day13(dayThirteenTestInput);
+var dayThirteenInput = File.ReadAllLines("./Day13Input.txt");
+var dayThirteenPuzzle = new Day13(dayThirteenInput);
+Console.WriteLine($"Day 13 Part 01 Solution - {dayThirteenPuzzle.SolvePartOne()}");
+Console.WriteLine($"Day 13 Part 02 Solution - {dayThirteenPuzzle.SolvePartTwo()}");
